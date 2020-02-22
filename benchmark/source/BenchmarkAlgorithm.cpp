@@ -635,6 +635,18 @@ void BenchmarkAlgorithm2(EASTLTest_Rand& rng, EA::StdC::Stopwatch& stopwatch1, E
 
 
 			///////////////////////////////
+			// Test random_shuffle
+			///////////////////////////////
+
+			// TestRandomShuffleStd(stopwatch1, stdVectorUint64, rng);
+			// TestRandomShuffleEa (stopwatch2, eaVectorUint64,  rng);
+
+			// if(i == 1)
+			//     Benchmark::AddResult("algorithm/rand_shuffle/vector<uint64_t>", stopwatch1.GetUnits(), stopwatch1.GetElapsedTime(), stopwatch2.GetElapsedTime());
+
+
+
+			///////////////////////////////
 			// Test lower_bound
 			///////////////////////////////
 
