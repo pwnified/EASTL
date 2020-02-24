@@ -3934,20 +3934,22 @@ namespace eastl
 		}
 	};
 
-	#if defined(EA_CHAR8_UNIQUE) && EA_CHAR8_UNIQUE
-		template <>
-		struct hash<string8>
-		{
-			size_t operator()(const string8& x) const
-			{
-				const char8_t* p = (const char8_t*)x.c_str();
-				unsigned int c, result = 2166136261U;
-				while((c = *p++) != 0)
-					result = (result * 16777619) ^ c;
-				return (size_t)result;
-			}
-		};
-	#endif
+	// NOTE(rparolin): no longer required.
+	//
+	// #if defined(EA_CHAR8_UNIQUE) && EA_CHAR8_UNIQUE
+	//     template <>
+	//     struct hash<string8>
+	//     {
+	//         size_t operator()(const string8& x) const
+	//         {
+	//             const char8_t* p = (const char8_t*)x.c_str();
+	//             unsigned int c, result = 2166136261U;
+	//             while((c = *p++) != 0)
+	//                 result = (result * 16777619) ^ c;
+	//             return (size_t)result;
+	//         }
+	//     };
+	// #endif
 
 	template <>
 	struct hash<string16>
